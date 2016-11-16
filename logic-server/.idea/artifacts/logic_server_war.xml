@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="logic-server:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="logic-1.0-DEV.war">
+      <element id="artifact" artifact-name="logic-server:war exploded" />
+    </root>
+  </artifact>
+</component>
