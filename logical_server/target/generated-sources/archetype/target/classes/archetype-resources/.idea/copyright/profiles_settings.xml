@@ -1,0 +1,11 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="CopyrightManager">
+  <settings default="kidbear">
+    <module2copyright>
+      <element module="Project Files" copyright="kidbear" />
+      <element module="All" copyright="kidbear" />
+    </module2copyright>
+  </settings>
+</component>

@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="libraryTable">
+  <library name="Maven: com.xy:javapns:${version}">
+    <CLASSES>
+      <root url="jar://E:/jar/com/xy/javapns/${version}/javapns-${version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/jar/com/xy/javapns/${version}/javapns-${version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/jar/com/xy/javapns/${version}/javapns-${version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

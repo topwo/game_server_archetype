@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="libraryTable">
+  <library name="Maven: aopalliance:aopalliance:${version}">
+    <CLASSES>
+      <root url="jar://E:/jar/aopalliance/aopalliance/${version}/aopalliance-${version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/jar/aopalliance/aopalliance/${version}/aopalliance-${version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/jar/aopalliance/aopalliance/${version}/aopalliance-${version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

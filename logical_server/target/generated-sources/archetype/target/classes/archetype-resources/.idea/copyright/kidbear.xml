@@ -1,0 +1,8 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="CopyrightManager">
+  <copyright>
+    <option name="myName" value="kidbear" />
+  </copyright>
+</component>

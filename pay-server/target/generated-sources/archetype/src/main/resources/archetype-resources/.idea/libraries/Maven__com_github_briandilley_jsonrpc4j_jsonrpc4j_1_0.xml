@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="libraryTable">
+  <library name="Maven: com.github.briandilley.jsonrpc4j:jsonrpc4j:${version}">
+    <CLASSES>
+      <root url="jar://E:/jar/com/github/briandilley/jsonrpc4j/jsonrpc4j/${version}/jsonrpc4j-${version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/jar/com/github/briandilley/jsonrpc4j/jsonrpc4j/${version}/jsonrpc4j-${version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/jar/com/github/briandilley/jsonrpc4j/jsonrpc4j/${version}/jsonrpc4j-${version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

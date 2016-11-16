@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/main/resources/log4j.properties=UTF-8
+encoding//src/main/resources/spring-mongodb/mongodb.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/index.jsp=UTF-8
+encoding/<project>=UTF-8

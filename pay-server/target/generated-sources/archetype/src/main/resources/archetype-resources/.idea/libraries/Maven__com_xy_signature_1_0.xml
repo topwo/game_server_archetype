@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="libraryTable">
+  <library name="Maven: com.xy:signature:${version}">
+    <CLASSES>
+      <root url="jar://E:/jar/com/xy/signature/${version}/signature-${version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/jar/com/xy/signature/${version}/signature-${version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/jar/com/xy/signature/${version}/signature-${version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

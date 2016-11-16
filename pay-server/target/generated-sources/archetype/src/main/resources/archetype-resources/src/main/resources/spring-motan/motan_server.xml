@@ -1,0 +1,28 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="${version}" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:motan="http://api.weibo.com/schema/motan"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+   http://api.weibo.com/schema/motan http://api.weibo.com/schema/motan.xsd
+   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- service implemention bean -->
+	<bean id="${artifactId}Impl" class="${package}.client.${artifactId}.PayController" />
+	<!-- exporting service by motan -->
+	<!-- <motan:service interface="${package}.client.${artifactId}.IPay" ref="${artifactId}Impl" 
+		export="8500" /> -->
+
+	<!-- zookeeper -->
+	<!-- Dev Env -->
+	<!-- <motan:registry regProtocol="zookeeper" name="kidbear_zookeeper" address="123.59.110.201:2181" 
+		/> -->
+	<!-- Ol Env -->
+	<motan:registry regProtocol="zookeeper" name="kidbear_zookeeper"
+		address="127.0.0.1:2181" requestTimeout="10000"/>
+	<!-- exporting service by motan -->
+	<motan:service interface="${package}.client.${artifactId}.IPay"
+		ref="${artifactId}Impl" registry="kidbear_zookeeper" export="8500" />
+</beans>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jboss:jandex:1.0.1-SNAPSHOT.Final">
+    <CLASSES>
+      <root url="jar://E:/jar/org/jboss/jandex/1.0.1-SNAPSHOT.Final/jandex-1.0.1-SNAPSHOT.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/jar/org/jboss/jandex/1.0.1-SNAPSHOT.Final/jandex-1.0.1-SNAPSHOT.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/jar/org/jboss/jandex/1.0.1-SNAPSHOT.Final/jandex-1.0.1-SNAPSHOT.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

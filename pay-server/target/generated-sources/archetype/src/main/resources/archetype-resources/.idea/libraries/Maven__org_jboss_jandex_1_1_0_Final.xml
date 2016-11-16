@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="libraryTable">
+  <library name="Maven: org.jboss:jandex:1.${version}.Final">
+    <CLASSES>
+      <root url="jar://E:/jar/org/jboss/jandex/1.${version}.Final/jandex-1.${version}.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/jar/org/jboss/jandex/1.${version}.Final/jandex-1.${version}.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/jar/org/jboss/jandex/1.${version}.Final/jandex-1.${version}.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

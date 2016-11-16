@@ -1,0 +1,27 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:motan="http://api.weibo.com/schema/motan"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+   http://api.weibo.com/schema/motan http://api.weibo.com/schema/motan.xsd">
+
+	<!-- reference to the remote service -->
+	<!-- <motan:referer id="payService" interface="com.kidbear.pay.client.pay.IPay" 
+		directUrl="123.59.110.201:8500" /> -->
+	<!-- zookeeper设置 -->
+	<!-- Ol Dev -->
+	<!-- 
+	<motan:registry regProtocol="zookeeper" name="kidbear_zookeeper"
+		address="10.136.0.124:2181" /> 
+		-->
+	<!-- Dev Dev -->
+	<motan:registry regProtocol="zookeeper" name="kidbear_zookeeper"
+		address="123.59.110.201:2181" /> 
+	<!-- 
+		-->
+	<!-- reference to the remote service -->
+	<motan:referer id="payService" interface="com.kidbear.pay.client.pay.IPay"
+		registry="kidbear_zookeeper" />
+</beans>
