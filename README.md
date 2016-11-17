@@ -11,6 +11,7 @@ for Java game server.As so far,the first version only includes _Logic Server(pro
 File Server(process the hot fix for the game client)_ and _Pay Server(process the pay from the bought in the game)_ .At fist,this is only my personal framework,
 and used to build project with some general modules like database module and network module,so that I don't need to build these modules again and again.
 However,When demand increases,we need more modules.
+
 This archetype now is in the initial phase and has some bugs.In my thought,I just want to share the framework so that I can help others be faster and quicker 
 when developing a game server.But personal power is so limited.So to achieve my goal,I need you help me to approve my framework.It's good to submit the issues
 or push requests through github.Let's do it together!
@@ -20,6 +21,7 @@ or push requests through github.Let's do it together!
 - Supports Http,Socket,WebSocket protocol.
 - Integrates Mysql and Mongo Database.
 - Provides Redis and Memecache nosql database.
+- Provides Motan and JsonRpc RPC framework.
 - Contains a complete set of GM management system.
 
 # Quick Start
@@ -30,24 +32,235 @@ The minimum requirements to run the quick start are:
 ```
 JDK 1.7 or above
 Maven3
-IDE like Eclipse or Itellij Idea
 ```
 
-## Installation
-The framework include four projects for now,all the projects are built by maven,I create the maven-archetype in every project's target diectory.
-Before you use the framework,you need install the maven archetype in your local environment.
-
 ## Logic Server 
-Logic server process the game logics,all logic interfaces integrated at this part.You need to add your own logic interfaces into this part.
-
+Logic server process the game logics,all logic interfaces integrated at this part.You need to add your own logic interfaces into this part.The following steps lead you start the basic service of the server,
+more service is closed and you need to open them in source code.More information,please jump to Document.
+1.Install the maven archetype.
+Enter the target/generated-sources/archetype directory and install the archetype.
+```
+mvn install
+```
+2.Create project with the archetype installed.
+```
+mvn archetype:generate -DarchetypeCatalog=local
+```
+choose the following item:
+```
+local -> com.kidbear.archetype:logical-archetype (logical-archetype)
+```
+3.Update propertie files in src/main/resource.
+net.properties:define some properties about network.
+```
+port = 9191
+ip=127.0.0.1
+```
+server.properties:define some properties about the server.
+```
+# server id
+serverId = 1
+# whether open the payment
+payOpen = false
+# login server info
+loginName = router_server
+loginServer = 127.0.0.1
+loginPort = 82
+# pay server info
+payServer = 127.0.0.1
+payPort = 8500
+# redis info
+redisServer = 127.0.0.1:6440
+redisPwd = 123456
+# cache server info
+cacheServer = 127.0.0.1:11211
+```
+4.Build the war package by maven
+Enter the root directory and run the install command.
+```
+mvn install
+```
+5.Deploy the war by tomcat.
+6.Enter the GM management system.
+This system contains the game manage functions you develope your self.
+```
+http://127.0.0.1:8080/logic/admin/index
+```
+7.Telnet the game logic port
+This port is the entry your game logic service at.
+```
+telnet 127.0.0.1 9191
+```
 ## Router Server
 Router server process the login and choose server in the server list.
+1.Install the maven archetype.
+Enter the target/generated-sources/archetype directory and install the archetype.
+```
+mvn install
+```
+2.Create project with the archetype installed.
+```
+mvn archetype:generate -DarchetypeCatalog=local
+```
+choose the following item:
+```
+local -> com.kidbear.archetype:logical-archetype (logical-archetype)
+```
+3.Update propertie files in src/main/resource.
+net.properties:define some properties about network.
+```
+port = 9191
+ip=127.0.0.1
+```
+server.properties:define some properties about the server.
+```
+# server id
+serverId = 1
+# whether open the payment
+payOpen = false
+# login server info
+loginName = router_server
+loginServer = 127.0.0.1
+loginPort = 82
+# pay server info
+payServer = 127.0.0.1
+payPort = 8500
+# redis info
+redisServer = 127.0.0.1:6440
+redisPwd = 123456
+# cache server info
+cacheServer = 127.0.0.1:11211
+```
+4.Build the war package by maven
+Enter the root directory and run the install command.
+```
+mvn install
+```
+5.Deploy the war by tomcat.
+6.Enter the GM management system.
+This system contains the game manage functions you develope your self.
+```
+http://127.0.0.1:8080/logic/admin/index
+```
+7.Telnet the game logic port
+This port is the entry your game logic service at.
+```
+telnet 127.0.0.1 9191
+```
 
 ## File Server
 File Server process the hot fix for the game client.
+1.Install the maven archetype.
+Enter the target/generated-sources/archetype directory and install the archetype.
+```
+mvn install
+```
+2.Create project with the archetype installed.
+```
+mvn archetype:generate -DarchetypeCatalog=local
+```
+choose the following item:
+```
+local -> com.kidbear.archetype:logical-archetype (logical-archetype)
+```
+3.Update propertie files in src/main/resource.
+net.properties:define some properties about network.
+```
+port = 9191
+ip=127.0.0.1
+```
+server.properties:define some properties about the server.
+```
+# server id
+serverId = 1
+# whether open the payment
+payOpen = false
+# login server info
+loginName = router_server
+loginServer = 127.0.0.1
+loginPort = 82
+# pay server info
+payServer = 127.0.0.1
+payPort = 8500
+# redis info
+redisServer = 127.0.0.1:6440
+redisPwd = 123456
+# cache server info
+cacheServer = 127.0.0.1:11211
+```
+4.Build the war package by maven
+Enter the root directory and run the install command.
+```
+mvn install
+```
+5.Deploy the war by tomcat.
+6.Enter the GM management system.
+This system contains the game manage functions you develope your self.
+```
+http://127.0.0.1:8080/logic/admin/index
+```
+7.Telnet the game logic port
+This port is the entry your game logic service at.
+```
+telnet 127.0.0.1 9191
+```
 
 ## Pay Server
 Pay server process the pay from the bought in the game
+1.Install the maven archetype.
+Enter the target/generated-sources/archetype directory and install the archetype.
+```
+mvn install
+```
+2.Create project with the archetype installed.
+```
+mvn archetype:generate -DarchetypeCatalog=local
+```
+choose the following item:
+```
+local -> com.kidbear.archetype:logical-archetype (logical-archetype)
+```
+3.Update propertie files in src/main/resource.
+net.properties:define some properties about network.
+```
+port = 9191
+ip=127.0.0.1
+```
+server.properties:define some properties about the server.
+```
+# server id
+serverId = 1
+# whether open the payment
+payOpen = false
+# login server info
+loginName = router_server
+loginServer = 127.0.0.1
+loginPort = 82
+# pay server info
+payServer = 127.0.0.1
+payPort = 8500
+# redis info
+redisServer = 127.0.0.1:6440
+redisPwd = 123456
+# cache server info
+cacheServer = 127.0.0.1:11211
+```
+4.Build the war package by maven
+Enter the root directory and run the install command.
+```
+mvn install
+```
+5.Deploy the war by tomcat.
+6.Enter the GM management system.
+This system contains the game manage functions you develope your self.
+```
+http://127.0.0.1:8080/logic/admin/index
+```
+7.Telnet the game logic port
+This port is the entry your game logic service at.
+```
+telnet 127.0.0.1 9191
+```
 
 # Documents
 

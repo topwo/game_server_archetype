@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/game_server_template.iml" filepath="$PROJECT_DIR$/.idea/game_server_template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logic-server/logic.iml" filepath="$PROJECT_DIR$/logic-server/logic.iml" />
     </modules>
   </component>
 </project>
