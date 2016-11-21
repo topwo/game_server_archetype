@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0db5d95d-51c7-4d8a-be5f-b33ec3a9d8d1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/logic-server/.idea/workspace.xml" />
     </list>
     <ignored path="game_server_template.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +30,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="305">
-                <caret line="244" column="105" selection-start-line="244" selection-start-column="105" selection-end-line="244" selection-end-column="105" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -754,12 +752,12 @@
       <workItem from="1479276500873" duration="12762000" />
       <workItem from="1479347579824" duration="6681000" />
       <workItem from="1479435914354" duration="516000" />
-      <workItem from="1479715434416" duration="4455000" />
+      <workItem from="1479715434416" duration="4686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25722000" />
+    <option name="totallyTimeSpent" value="25953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1092" extended-state="0" />
@@ -990,8 +988,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="305">
-            <caret line="244" column="105" selection-start-line="244" selection-start-column="105" selection-end-line="244" selection-end-column="105" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />

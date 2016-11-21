@@ -1,10 +1,6 @@
-Speedy
+# Speedy
 [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/hjcenry/game_server_archetype/blob/master/LICENSE)
 [![Build Status](https://img.shields.io/travis/weibocom/motan/master.svg?label=Build)]()
-======
-
-Generic Java game server framework
-----------------------------------
 
 # Overview
 
@@ -241,8 +237,8 @@ http://127.0.0.1:8080/pay/admin/index
 
 # Documents
 
-- ![Wiki](https://github.com/hjcenry/game_server_archetype/wiki)
-- ![Wiki(中文)](https://github.com/hjcenry/game_server_archetype/wiki/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3)
+- [Wiki](https://github.com/hjcenry/game_server_archetype/wiki)
+- [Wiki(中文)](https://github.com/hjcenry/game_server_archetype/wiki/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3)
 
 # Contributors
 
