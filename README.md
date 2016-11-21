@@ -1,5 +1,7 @@
-Speedy(undone)
-==============
+Speedy
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/hjcenry/game_server_archetype/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/travis/weibocom/motan/master.svg?label=Build)]()
+======
 
 Generic Java game server framework
 ----------------------------------
@@ -35,6 +37,7 @@ Maven3
 ```
 
 ## Logic Server 
+
 Logic server process the game logics,all logic interfaces integrated at this part.You need to add your own logic interfaces into this part.The following steps lead you start the basic service of the server,
 more service is closed and you need to open them in source code.More information,please jump to Document.
 1.Install the maven archetype.
@@ -91,7 +94,9 @@ This port is the entry your game logic service at.
 ```
 telnet 127.0.0.1 9191
 ```
+
 ## Router Server
+
 Router server process the login and choose server in the server list.
 1.Install the maven archetype.
 Enter the target/generated-sources/archetype directory and install the archetype.
@@ -104,32 +109,29 @@ mvn archetype:generate -DarchetypeCatalog=local
 ```
 choose the following item:
 ```
-local -> com.kidbear.archetype:logical-archetype (logical-archetype)
+local -> com.kidbear.archetype:router-archetype (router-archetype)
 ```
 3.Update propertie files in src/main/resource.
-net.properties:define some properties about network.
-```
-port = 9191
-ip=127.0.0.1
-```
 server.properties:define some properties about the server.
 ```
-# server id
-serverId = 1
-# whether open the payment
-payOpen = false
 # login server info
-loginName = router_server
 loginServer = 127.0.0.1
-loginPort = 82
-# pay server info
-payServer = 127.0.0.1
-payPort = 8500
-# redis info
+loginPort = 81
+# file server info
+fileIp=127.0.0.1
+filePort=8300
+# redis server info
 redisServer = 127.0.0.1:6440
 redisPwd = 123456
 # cache server info
 cacheServer = 127.0.0.1:11211
+```
+version.properties:define the version about the client.
+```
+# base version of channel 0
+0=1.3
+# base version of channel 1
+1=1.3
 ```
 4.Build the war package by maven
 Enter the root directory and run the install command.
@@ -140,15 +142,11 @@ mvn install
 6.Enter the GM management system.
 This system contains the game manage functions you develope your self.
 ```
-http://127.0.0.1:8080/logic/admin/index
-```
-7.Telnet the game logic port
-This port is the entry your game logic service at.
-```
-telnet 127.0.0.1 9191
+http://127.0.0.1:8080/router/admin/index
 ```
 
 ## File Server
+
 File Server process the hot fix for the game client.
 1.Install the maven archetype.
 Enter the target/generated-sources/archetype directory and install the archetype.
@@ -161,27 +159,21 @@ mvn archetype:generate -DarchetypeCatalog=local
 ```
 choose the following item:
 ```
-local -> com.kidbear.archetype:logical-archetype (logical-archetype)
+local -> com.kidbear.archetype:file-archetype (file-archetype)
 ```
 3.Update propertie files in src/main/resource.
 net.properties:define some properties about network.
 ```
-port = 9191
+port = 8300
 ip=127.0.0.1
 ```
 server.properties:define some properties about the server.
 ```
 # server id
 serverId = 1
-# whether open the payment
-payOpen = false
 # login server info
-loginName = router_server
 loginServer = 127.0.0.1
 loginPort = 82
-# pay server info
-payServer = 127.0.0.1
-payPort = 8500
 # redis info
 redisServer = 127.0.0.1:6440
 redisPwd = 123456
@@ -197,15 +189,16 @@ mvn install
 6.Enter the GM management system.
 This system contains the game manage functions you develope your self.
 ```
-http://127.0.0.1:8080/logic/admin/index
+http://127.0.0.1:8080/file/admin/index
 ```
-7.Telnet the game logic port
-This port is the entry your game logic service at.
+7.Telnet the file port
+This port used for file service in the game.
 ```
-telnet 127.0.0.1 9191
+telnet 127.0.0.1 8300
 ```
 
 ## Pay Server
+
 Pay server process the pay from the bought in the game
 1.Install the maven archetype.
 Enter the target/generated-sources/archetype directory and install the archetype.
@@ -218,27 +211,16 @@ mvn archetype:generate -DarchetypeCatalog=local
 ```
 choose the following item:
 ```
-local -> com.kidbear.archetype:logical-archetype (logical-archetype)
+local -> com.kidbear.archetype:pay-archetype (pay-archetype)
 ```
 3.Update propertie files in src/main/resource.
-net.properties:define some properties about network.
-```
-port = 9191
-ip=127.0.0.1
-```
 server.properties:define some properties about the server.
 ```
 # server id
 serverId = 1
-# whether open the payment
-payOpen = false
 # login server info
-loginName = router_server
 loginServer = 127.0.0.1
 loginPort = 82
-# pay server info
-payServer = 127.0.0.1
-payPort = 8500
 # redis info
 redisServer = 127.0.0.1:6440
 redisPwd = 123456
@@ -254,21 +236,17 @@ mvn install
 6.Enter the GM management system.
 This system contains the game manage functions you develope your self.
 ```
-http://127.0.0.1:8080/logic/admin/index
-```
-7.Telnet the game logic port
-This port is the entry your game logic service at.
-```
-telnet 127.0.0.1 9191
+http://127.0.0.1:8080/pay/admin/index
 ```
 
 # Documents
 
-Wiki
-Wiki(中文)
-Contributors
+- ![Wiki](https://github.com/hjcenry/game_server_archetype/wiki)
+- ![Wiki(中文)](https://github.com/hjcenry/game_server_archetype/wiki/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3)
 
-何金成(@hjcenry)
+# Contributors
+
+- 何金成(@hjcenry)
 
 # License
 
